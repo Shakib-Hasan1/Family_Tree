@@ -12,8 +12,13 @@
             --border-color: black;
         }
 
+@font-face {
+  font-family: 'Purno';
+  src: url('./Font/Purno-Regular.ttf') format('truetype');
+}
+
         html,body{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Purno';
     background-color: var(--primary-bg);
 
     margin: 0;
