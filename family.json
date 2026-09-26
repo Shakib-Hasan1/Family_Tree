@@ -1,0 +1,531 @@
+{
+  "members": {
+    "001": {
+      "name": "আলাবক্স",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "002": {
+      "name": "অপরিচিতা-২",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "003": {
+      "name": "মরহুম মোঃ তাজু মুন্সী",
+      "lifetime": "০০০০ থেকে ১৯৯২",
+      "hometown": "নেত্রকোনা",
+      "occupation": "ব্যবসা ও কৃষি",
+      "contact": "প্রযোজ্য নয়",
+      "photo": "ggrand_f.png"
+    },
+
+    "004": {
+      "name": "মরহুমা কার্তিকের মা",
+      "lifetime": "১৯২০ থেকে ০৫-০৮-২০২৫",
+      "hometown": "আড়ালিয়া, কেন্দুয়া",
+      "occupation": "গৃহিণী",
+      "contact": "প্রযোজ্য নয়",
+      "photo": "ggrand_m.png"
+    },
+
+    "005": {
+      "name": "মিঞা হোসেন",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "006": {
+          "name": "এজিন",
+          "lifetime": "অজানা",
+          "hometown": "Unknown",
+          "occupation": "Unknown",
+          "contact": "Unknown",
+          "photo": "ggrand_f.png"
+        },
+
+    "007": {
+      "name": "অপরিচিতা-৭",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+
+    "008": {
+      "name": "মোঃ আবুল কাসেম",
+      "lifetime": "০৬-০৫-১৯৭০ থেকে অদ্যাবধি",
+      "hometown": "রাজিবপুর",
+      "occupation": "কৃষক",
+      "contact": "01739-975341 / 01906-426121",
+      "photo": "kasem.png"
+    },
+
+    "009": {
+      "name": "মোছাঃ তানজিনা আক্তার (শেলী)",
+      "lifetime": "০২-০৩-১৯৮৬ থেকে অদ্যাবধি",
+      "hometown": "নওয়ানগর (এসডিও বাড়ি)",
+      "occupation": "গৃহিণী",
+      "contact": "01906-426255",
+      "photo": "sheli.png"
+    },
+
+
+    "010": {
+      "name": "মোছাঃ নিলুফার ইয়াসমিন(নিলু)",
+      "lifetime": "১৯৮০ থেকে অদ্যবধি",
+      "hometown": "রাজিপুর",
+      "occupation": "গৃহিণী",
+      "contact": "",
+      "photo": "nilufar.png"
+    },
+
+    "011": {
+      "name": "মরহুম মোঃ তাহের উদ্দিন",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "012": {
+      "name": "মোছাঃ ঊষা আক্তার",
+      "lifetime": "০৩-০৯-১৯৭৫ থেকে অদ্যবধি",
+      "hometown": "রাজিবপুর",
+      "occupation": "গৃহিণী",
+      "contact": "",
+      "photo": "usha.png"
+    },
+
+     "013": {
+      "name": "মরহুম মঞ্জুল হক",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+
+    "014": {
+      "name": "মোঃ আমির হোসেন",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "015": {
+      "name": "অপরিচিত-৮",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+     "016": {
+      "name": "মোঃ আব্দুল কদ্দুস",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "017": {
+      "name": "মোছাঃ রাহেলা বেগম",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+
+    "018": {
+      "name": "শাকিব হাসান (হৃদয়)",
+      "lifetime": "১৯-১০-১৯৯৭ থেকে অদ্যাবধি",
+      "hometown": "রাজিবপুর",
+      "occupation": "উপ-সহকারী প্রকৌশলী (বেবিচক)",
+      "contact": "01571-328904 / 01786-160638",
+      "photo": "hridoy.png"
+    },
+
+    "019": {
+      "name": "স্বর্ণা আক্তার",
+      "lifetime": "২২-০১-২০০৩ থেকে অদ্যাবধি",
+      "hometown": "কাইলাটি চরপাড়া",
+      "occupation": "গৃহিণী",
+      "contact": "01540-229428 / 01313-943452",
+      "photo": "sorna.png"
+    },
+
+    "020": {
+      "name": "শাকিল হাসান (রিয়াদ)",
+      "lifetime": "১০-০৪-২০০২ থেকে অদ্যাবধি",
+      "hometown": "রাজিবপুর",
+      "occupation": "জুনিয়র এসিস্ট্যান্ট ম্যানেজার (বিটিসিএল)",
+      "contact": "01754-080224 / 01629-833341",
+      "photo": "riad.png"
+    },
+
+   
+
+    "021": {
+      "name": "অপরিচিত ৯",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "022": {
+      "name": "অপরিচিতা ১০",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "023": {
+      "name": "অপরিচিত-১১",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+
+    "024": {
+      "name": "অপরিচিত-১২",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "025": {
+      "name": "অপরিচিতা ১৩",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "026": {
+      "name": "অপরিচিত-১৪",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "027": {
+      "name": "অপরিচিত-১৫",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "028": {
+      "name": "অপরিচিতা-১৬",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "029": {
+      "name": "মোঃ দুলাল মিয়া",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "030": {
+      "name": "কলি আক্তার",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "031": {
+      "name": "মোঃ রতন মিয়া",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "032": {
+      "name": "ভাবি (রতন ভাই)",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "033": {
+      "name": "মোঃ আল আমিন",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+    "034": {
+          "name": "রুমা আক্তার",
+          "lifetime": "অজানা",
+          "hometown": "Unknown",
+          "occupation": "Unknown",
+          "contact": "Unknown",
+          "photo": "ggrand_m.png"
+        },
+
+    "035": {
+      "name": "মোঃ আল মামুন",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+
+    "036": {
+      "name": "ভাবি (মামুন ভাই)",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "037": {
+      "name": "মোছাঃ নাজমা আক্তার",
+      "lifetime": "০২-০৩-১৯৮৬ থেকে অদ্যাবধি",
+      "hometown": "রাজিবপুর",
+      "occupation": "গৃহিণী",
+      "contact": "",
+      "photo": "ggrand_m.png"
+    },
+
+
+    "038": {
+      "name": "দুলাভাই (নাজমা আপা)",
+      "lifetime": "১৯৮০ থেকে অদ্যবধি",
+      "hometown": "রাজিপুর",
+      "occupation": "ব্যবসায়ী",
+      "contact": "",
+      "photo": "ggrand_f.png"
+    },
+
+    "039": {
+      "name": "জাহানারা আক্তার",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "040": {
+      "name": "দুলাভাই (জাহানারা আপা)",
+      "lifetime": "০৩-০৯-১৯৭৫ থেকে অদ্যবধি",
+      "hometown": "",
+      "occupation": "ব্যবসায়ী",
+      "contact": "",
+      "photo": "ggrand_f.png"
+    },
+
+     "041": {
+      "name": "মোঃ আব্দুস সালাম",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    },
+
+
+    "042": {
+      "name": "জেসমিন আক্তার",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+    "043": {
+      "name": "লিপি আক্তার",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_m.png"
+    },
+
+     "044": {
+      "name": "মোঃ সোহেল মিয়া",
+      "lifetime": "অজানা",
+      "hometown": "Unknown",
+      "occupation": "Unknown",
+      "contact": "Unknown",
+      "photo": "ggrand_f.png"
+    }
+
+
+
+   },
+
+
+  "families": [
+    {
+      "person": ["001"], 
+      "spouse": ["002"],
+      "child": ["003","005","006","027"]
+    },
+
+    {
+      "person": ["027"], 
+      "spouse": ["028"],
+      "child": []
+    },
+
+
+    {
+      "person": ["003"], 
+      "spouse": ["004"],
+      "child": ["008", "010", "012"]
+    },
+
+    {
+      "person": ["005"],
+      "spouse": [],
+      "child": []
+    },
+
+    {
+      "person": ["006"], 
+      "spouse": ["007"],
+      "child": ["014","016"]
+    },
+
+    {
+      "person": ["008"], 
+      "spouse": ["009"],
+      "child": ["018","020"]
+    },
+
+    {
+      "person": ["010"], 
+      "spouse": ["011"],
+      "child": ["021","022","023"]
+    },
+
+    {
+      "person": ["012"], 
+      "spouse": ["013"],
+      "child": ["024","025","026"]
+    },
+    {
+      "person": ["014"], 
+      "spouse": ["015"],
+      "child": []
+    },
+    {
+      "person": ["016"], 
+      "spouse": ["017"],
+      "child": ["029","031","033","035","037","039","042","043"]
+    },
+
+    {
+      "person": ["018"], 
+      "spouse": ["019"],
+      "child": []
+    },
+
+    {
+      "person": ["029"], 
+      "spouse": ["030"],
+      "child": []
+    },
+
+    {
+      "person": ["031"], 
+      "spouse": ["032"],
+      "child": []
+    },
+
+    {
+      "person": ["033"], 
+      "spouse": ["034"],
+      "child": []
+    },
+
+    {
+      "person": ["035"], 
+      "spouse": ["036"],
+      "child": []
+    },
+
+    {
+      "person": ["037"], 
+      "spouse": ["038"],
+      "child": []
+    },
+
+    {
+      "person": ["039"], 
+      "spouse": ["040"],
+      "child": []
+    },
+
+    {
+      "person": ["041"], 
+      "spouse": ["042"],
+      "child": []
+    },
+
+    {
+      "person": ["043"], 
+      "spouse": ["044"],
+      "child": []
+    }
+    
+
+
+  ]
+}
