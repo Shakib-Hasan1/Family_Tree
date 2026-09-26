@@ -1,1 +1,465 @@
+:root {
+            --border-color: #ccc;
+            --box-bg: white;
+            --box-border: blue;
+            --hover-bg: lightblue;
+            --connector-color: #ef4444;
+            --btn-bg: #2563eb;
+            --btn-hover: #1d4ed8;
+            --panel-bg: white;
+            --text-main: #ffffff;
+            --text-sub: green;
+            --border-color: black;
+        }
 
+        html,body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--primary-bg);
+
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+    height: 100%;
+
+    /* IMPORTANT */
+    display: block;
+
+    /* Allow the complete tree to be scrolled */
+    overflow: auto;
+    padding-top: 100px; 
+        }
+        h1 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            z-index: 10;
+            white-space: nowrap;
+        }
+        #family-tree {
+            position: relative;
+            width: 3000px;       /* your tree's required width */
+            height: 2000px;      /* your tree's required height */
+        }
+
+        /* --- Tree Diagram Layout --- */
+        .family-tree {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-bottom: 100px; /* Space at bottom for tলিফooltip display room */
+        }
+
+        .family-tree ul {
+            padding-top: 20px; 
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding-left: 0;
+            list-style-type: none;
+            
+            /* Animation setup for collapsible branches */
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: top center;
+            opacity: 1;
+            max-height: 2000px; 
+            overflow: hidden;
+        }
+
+        /* Hidden branch state for collapsible animation */
+        .family-tree li.collapsed > ul {
+            max-height: 0 !important;
+            opacity: 0 !important;
+            padding-top: 0 !important;
+            pointer-events: none;
+        }
+
+        .family-tree li {
+            text-align: center;
+            position: relative;
+            padding: 20px 10px 0 10px;
+            transition: all 0.4s ease;
+            display: block;
+        }
+
+        /* --- Connecting Lines via Pseudo-elements --- */
+        .family-tree li::before, .family-tree li::after {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            right: 50%;
+            border-top: 1px solid var(--border-color);
+            width: 50%; 
+            height: 20px;
+        }
+        
+        .family-tree li::after {
+            right: auto; 
+            left: 50%;
+            border-left: 1px solid var(--border-color);
+        }
+
+        .family-tree li:only-child::after, .family-tree li:only-child::before {
+            display: none;
+        }
+
+        .family-tree li:only-child { 
+            padding-top: 0;
+        }
+
+        .family-tree li:first-child::before, .family-tree li:last-child::after {
+            border: 0 none;
+        }
+
+        .family-tree li:last-child::before {
+            border-right: 1px solid var(--border-color);
+            border-radius: 0 5px 0 0;
+        }
+        
+        .family-tree li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+
+        /* Vertical branch down connector from node box */
+        .family-tree ul ul::before {
+            content: '';
+            position: absolute; 
+            top: 0; 
+            left: 50%;
+            border-left: 1px solid var(--border-color);
+            width: 0; 
+            height: 20px;
+        }
+
+        /* --- Member Card Layout --- */
+        .member-card {
+            background: var(--box-bg);
+            border: 1px solid var(--box-border);
+            padding: 0.6rem;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+
+        /* Container for a single person within the card */
+        .person {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            min-width: 95px;
+            padding: 4px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative; 
+
+        /* Context parent for the tooltip alignment */
+        }
+        
+        .person:hover {
+            background-color: var(--hover-bg);
+            box-shadow: 0 0 0 1px var(--accent-color);
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-10%) translateY(-10%);
+            text-color: red;
+
+        }
+
+        /* Highlight card when tree branches are expanded/collapsed */
+        .branch-toggle-zone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0 4px;
+            color: var(--border-color);
+            transition: color 0.2s;
+        }
+        .branch-toggle-zone:hover {
+            color: var(--accent-color);
+        }
+
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid red;
+            background-color: #f3f4f6;
+            cursor: zoom-in;
+
+            /* CHANGE THIS */
+            pointer-events: auto;
+        }
+
+        .member-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: blue;
+            margin-top: 4px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .lifetime {
+            font-size: 0.7rem;
+            color: green;
+            margin-top: 1px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        /* --- Spousal/Couple Divider --- */
+        .couple-divider {
+            font-size: 0.9rem;
+            color: var(--connector-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            user-select: none;
+        }
+
+        /* --- Toggle Indicator Pill --- */
+        .toggle-badge {
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: blue;
+            font-size: 10px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            pointer-events: none;
+        }
+
+        /* Show the collapse badge when a parent branch is hidden */
+        li.collapsed > .member-card .toggle-badge {
+            opacity: 1;
+            transform: translateX(-50%) scale(1.1);
+        }
+
+        /* Crucial: Boosts the specific card container layer to the highest level on hover */
+        .member-card:hover {
+            z-index: 999 !important;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--primary-bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* --- Main Content Section --- */
+        .content-area {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: flex-start;
+            margin-right: 300px; /* Safe space margin so content never crawls under the side panel */
+        }
+
+    .page-title {
+            position: fixed;
+            top: 25px;
+            left: 0;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            font-size: 2.5rem;
+            color: #0f172a;
+            z-index: 100;
+        }
+
+    .family-tree {
+            padding-top: 100px;
+        }
+
+        .title {
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .preview-btn {
+            background-color: var(--btn-bg);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .preview-btn:hover {
+            background-color: var(--btn-hover);
+            transform: translateY(-1px);
+        }
+
+        /* --- FIXED SIDE TEXTBOX PANEL --- */
+        .side-info-panel {
+            position: fixed;
+            top: 5px;
+            right: 5px; /* Locked completely to the side of the screen */
+            width: 240px;
+            background: var(--panel-bg);
+            color: var(--text-main);
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15), 0 10px 10px -5px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+            z-index: 999999; /* Stays in front of everything */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            /* Hidden by default with smooth fade/slide transition */
+            opacity: 0;
+            transform: translateX(20px);
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        }
+
+        /* Active styling class triggered via JavaScript hover events */
+        .side-info-panel.active {
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        /* Display photo at the absolute top of the textbox panel */
+        .panel-photo {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px; /* Squared with clean corners */
+            object-fit: cover;
+            border: 2px solid #3b82f6;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            background-color: #0f172a;
+        }
+
+        .panel-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: blue;
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .panel-desc {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-sub);
+            text-align: left;
+            width: 100%;
+        }
+
+            /* ================================
+           CHILD HIGHLIGHT
+           ================================ */
+
+        .family-tree li.highlight-children > ul > li {
+            animation: childTremble 0.6s ease-in-out;
+        }
+
+        .family-tree li.highlight-children > ul > li .member-card {
+            background: #fef3c7;
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+        }
+
+        .family-tree li.highlight-children > ul > li .member-avatar {
+            border-color: #f59e0b;
+        }
+
+
+        /* Trembling animation */
+
+        @keyframes childTremble {
+
+            0% {
+                transform: translateX(0);
+            }
+
+            15% {
+                transform: translateX(-6px);
+            }
+
+            30% {
+                transform: translateX(6px);
+            }
+
+            45% {
+                transform: translateX(-5px);
+            }
+
+            60% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-3px);
+            }
+
+            90% {
+                transform: translateX(3px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+
+        }
+        #canvas {
+            position: absolute;
+            transform-origin: 0 0;
+        }
+
+
+        /* =========================================================
+           JSON FAMILY TREE
+           ROOT HAS NO CONNECTION ABOVE IT
+           ========================================================= */
+
+        .family-tree > ul.family-root {
+            padding-top: 0;
+        }
+
+        .family-tree > ul.family-root > li.family-node::before,
+        .family-tree > ul.family-root > li.family-node::after {
+            display: none;
+        }
+
+        .family-tree > ul.family-root::before {
+            display: none;
+        }
