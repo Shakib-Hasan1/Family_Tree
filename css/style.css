@@ -485,8 +485,7 @@
    ========================================================= */
 
 html, body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                 Roboto, Helvetica, Arial, sans-serif;
+    font-family: var(--font);
 
     background-color: var(--primary-bg);
 
