@@ -22,21 +22,21 @@
 
 
         html,body{
-    font-family: var(--font);
-    background-color: var(--primary-bg);
-
-    margin: 0;
-    padding: 0;
-
-    min-height: 100vh;
-    height: 100%;
-
-    /* IMPORTANT */
-    display: block;
-
-    /* Allow the complete tree to be scrolled */
-    overflow: auto;
-    padding-top: 100px; 
+          font-family: var(--font);
+          background-color: var(--primary-bg);
+      
+          margin: 0;
+          padding: 0;
+      
+          min-height: 100vh;
+          height: 100%;
+      
+          /* IMPORTANT */
+          display: block;
+      
+          /* Allow the complete tree to be scrolled */
+          overflow: auto;
+          padding-top: 100px; 
         }
         h1 {
             position: absolute;
