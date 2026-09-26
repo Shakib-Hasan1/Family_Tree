@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'SolaimanLipi';
+  src: url('./Font/SolaimanLipi.ttf') format('truetype');
+}
+
+
 :root {
             --border-color: #ccc;
             --box-bg: white;
@@ -10,15 +16,13 @@
             --text-main: #ffffff;
             --text-sub: green;
             --border-color: black;
+            --font:'SolaimanLipi';
         }
 
-@font-face {
-  font-family: 'Purno';
-  src: url('./Font/Purno-Regular.ttf') format('truetype');
-}
+
 
         html,body{
-    font-family: 'Purno';
+    font-family: var(--font);
     background-color: var(--primary-bg);
 
     margin: 0;
@@ -33,7 +37,6 @@
     /* Allow the complete tree to be scrolled */
     overflow: auto;
     padding-top: 100px; 
-touch-action: manipulation;
         }
         h1 {
             position: absolute;
@@ -52,11 +55,16 @@ touch-action: manipulation;
 
         /* --- Tree Diagram Layout --- */
         .family-tree {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding-bottom: 100px; /* Space at bottom for tলিফooltip display room */
-        }
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            overflow-y: visible;
+            box-sizing: border-box;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            -webkit-overflow-scrolling: touch;
+}
 
         .family-tree ul {
             padding-top: 20px; 
@@ -270,7 +278,7 @@ touch-action: manipulation;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: var(--font);
             background-color: var(--primary-bg);
             margin: 0;
             padding: 0;
@@ -469,3 +477,66 @@ touch-action: manipulation;
         .family-tree > ul.family-root::before {
             display: none;
         }
+        
+        /* =========================================================
+   MOBILE / TOUCH VIEWPORT FIX
+   Keep the page viewport at the device width.
+   The family tree itself handles horizontal scrolling.
+   ========================================================= */
+
+html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+
+    background-color: var(--primary-bg);
+
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+
+    display: block;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding-top: 100px;
+
+    box-sizing: border-box;
+}
+
+
+/* The tree is allowed to be wider than the phone,
+   but the page itself is NOT widened. */
+.family-tree {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+
+    box-sizing: border-box;
+}
+
+
+/* Do not let the generated tree force the BODY wider */
+.family-tree > ul {
+    width: max-content;
+    min-width: 100%;
+}
+
+
+/* Preserve the actual tree width */
+.family-tree ul {
+    flex-shrink: 0;
+}
+
+
+/* Prevent accidental horizontal expansion from the
+   fixed information panel */
+.side-info-panel {
+    box-sizing: border-box;
+    max-width: calc(100vw - 10px);
+}
